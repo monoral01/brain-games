@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "first JavaScript console project",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/monoral01/brain-games/issues"
   },
-  "homepage": "https://github.com/monoral01/brain-games#readme"
+  "homepage": "https://github.com/monoral01/brain-games#readme",
+  "dependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "readline-sync": "^1.4.10"
+  }
 }
