@@ -1,7 +1,7 @@
 ---
 settings:
   jest:
-    version: 24.5.2
+    version: 27.2.5
 plugins:
   # https://github.com/jest-community/eslint-plugin-jest
   - jest

@@ -3,7 +3,7 @@ name: lint-brain-games
 on:
   push:
     branches:
-      - '**'
+      - "**"
 
 jobs:
   lint:
