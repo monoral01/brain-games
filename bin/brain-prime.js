@@ -3,7 +3,7 @@ import games from '../src/index.js';
 // Логика игры
 const name = games.getAnswer('May I have your name? ');
 console.log(`Hello, ${name}!`);
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+console.log('Answer "yes" if the number is prime, otherwise answer "no".');
 let rightAnswerCount = 0;
 do {
   // Поскольку конкретного диапазона в задании не указано,
@@ -11,7 +11,7 @@ do {
   const randomNum = games.random(0, 100);
   console.log(`Question: ${randomNum}`);
   const userAnswer = games.getAnswer('Your answer: ');
-  const result = games.isEven(randomNum);
+  const result = games.isPrime(randomNum);
   if (result === userAnswer) {
     console.log('Correct!');
     rightAnswerCount += 1;
