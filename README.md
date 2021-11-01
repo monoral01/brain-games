@@ -8,9 +8,13 @@
 Демонстрация игр:
 
 [Чётность/нечетность числа](https://asciinema.org/a/441073)
+
 [Калькулятор мат. выражений](https://asciinema.org/a/kQlGvq70QojQkjEQH5EhE9X7E)
+
 [Определение НОД](https://asciinema.org/a/9BG8Ml27OQan34ie04p3vJgwa)
+
 [Определение пропущенного члена арифм. прогрессии](https://asciinema.org/a/9cZ56LDvRv4JQyOlEIziRFUgt)
+
 [Определение простого числа](https://asciinema.org/a/mpp7AX88pHIBlhusQ8QdPgvdG)
 
 ## Install dependencies
