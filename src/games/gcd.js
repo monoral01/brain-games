@@ -1,18 +1,17 @@
-import { random } from '../index.js';
+import getRandomNumber from '../utils.js';
 
-export function GCD(a, b) {
+function findGreatestDivisor(a, b) {
   if (b) {
-    return GCD(b, a % b);
+    return findGreatestDivisor(b, a % b);
   }
   return Math.abs(a);
 }
-// Логика игры
+
 export function createBrainGCD() {
-  const randomNum1 = random(0, 100);
-  const randomNum2 = random(0, 100);
+  const randomNum1 = getRandomNumber(0, 100);
+  const randomNum2 = getRandomNumber(0, 100);
   const question = `${randomNum1} ${randomNum2}`;
-  const result = GCD(randomNum1, randomNum2);
-  const obj = { question, result };
-  return obj;
+  const result = String(findGreatestDivisor(randomNum1, randomNum2));
+  return { result, question };
 }
-export const rule = 'Find the greatest common devisor:\n';
+export const rule = 'Find the greatest common devisor:';

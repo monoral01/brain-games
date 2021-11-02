@@ -1,6 +1,6 @@
-import { random } from '../index.js';
+import getRandomNumber from '../utils.js';
 
-function mathOperation(num1, num2, operator) {
+function evaluateExpression(num1, num2, operator) {
   switch (operator) {
     case '+':
       return num1 + num2;
@@ -9,18 +9,18 @@ function mathOperation(num1, num2, operator) {
     case '*':
       return num1 * num2;
     default:
-      return undefined;
+      console.log(`\nUnknown operator: "${operator}"!\n`);
+      return null;
   }
 }
-// Логика игры
+
 export function createBrainCalc() {
   const signs = ['-', '+', '*'];
-  const randomNum1 = random(0, 100);
-  const randomNum2 = random(0, 100);
-  const randomSign = signs[random(0, signs.length)];
-  const question = `${randomNum1} ${randomSign} ${randomNum2} = ?`;
-  const result = mathOperation(randomNum1, randomNum2, randomSign);
-  const obj = { question, result };
-  return obj;
+  const randomNum1 = getRandomNumber(0, 100);
+  const randomNum2 = getRandomNumber(0, 100);
+  const randomSign = signs[getRandomNumber(0, signs.length)];
+  const question = `${randomNum1} ${randomSign} ${randomNum2}`;
+  const result = String(evaluateExpression(randomNum1, randomNum2, randomSign));
+  return { result, question };
 }
-export const rule = 'Evaluate the value of the expression:\n';
+export const rule = 'Evaluate the value of the expression:';

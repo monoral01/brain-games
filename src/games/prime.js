@@ -1,7 +1,6 @@
-import { random } from '../index.js';
+import getRandomNumber from '../utils.js';
 
-// проверка на простое число
-function isPrime(num) {
+function isNumberPrime(num) {
   for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
     if (num % i === 0) return 'no';
   }
@@ -9,10 +8,9 @@ function isPrime(num) {
 }
 
 export function createBrainPrime() {
-  const question = random(0, 100);
-  const result = isPrime(question);
-  const obj = { question, result };
-  return obj;
+  const question = getRandomNumber(0, 100);
+  const result = isNumberPrime(question);
+  return { result, question };
 }
 
 export const rule = 'Answer "yes" if the number is prime, otherwise answer "no":';
