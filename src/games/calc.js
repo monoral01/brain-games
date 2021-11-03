@@ -15,7 +15,7 @@ function evaluateExpression(num1, num2, operator) {
 }
 
 export function createBrainCalc() {
-  const signs = ["-", "+", "*", "a"];
+  const signs = ["-", "+", "*"];
   const randomNum1 = getRandomNumber(0, 100);
   const randomNum2 = getRandomNumber(0, 100);
   const randomSign = signs[getRandomNumber(0, signs.length)];
