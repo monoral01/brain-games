@@ -13,8 +13,9 @@ env:
   jest: true
 
 extends:
-  - 'airbnb-base'
-  - 'plugin:jest/recommended'
+  - "airbnb-base"
+  - "plugin:jest/recommended"
+  - "prettier"
 
 parserOptions:
   ecmaVersion: 11
