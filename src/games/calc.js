@@ -1,21 +1,21 @@
-import getRandomNumber from '../utils.js';
+import getRandomNumber from "../utils.js";
 
+// eslint-disable-next-line consistent-return
 function evaluateExpression(num1, num2, operator) {
   switch (operator) {
-    case '+':
+    case "+":
       return num1 + num2;
-    case '-':
+    case "-":
       return num1 - num2;
-    case '*':
+    case "*":
       return num1 * num2;
     default:
-      console.log(`\nUnknown operator: "${operator}"!\n`);
-      return null;
+      throw new Error(`Unknown operator: ${operator}!`);
   }
 }
 
 export function createBrainCalc() {
-  const signs = ['-', '+', '*'];
+  const signs = ["-", "+", "*", "a"];
   const randomNum1 = getRandomNumber(0, 100);
   const randomNum2 = getRandomNumber(0, 100);
   const randomSign = signs[getRandomNumber(0, signs.length)];
@@ -23,4 +23,4 @@ export function createBrainCalc() {
   const result = String(evaluateExpression(randomNum1, randomNum2, randomSign));
   return { result, question };
 }
-export const rule = 'Evaluate the value of the expression:';
+export const rule = "Evaluate the value of the expression:";

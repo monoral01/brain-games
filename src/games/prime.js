@@ -1,10 +1,10 @@
-import getRandomNumber from '../utils.js';
+import getRandomNumber from "../utils.js";
 
 function isNumberPrime(num) {
   for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
-    if (num % i === 0) return 'no';
+    if (num % i === 0) return "no";
   }
-  return 'yes';
+  return "yes";
 }
 
 export function createBrainPrime() {
@@ -13,4 +13,5 @@ export function createBrainPrime() {
   return { result, question };
 }
 
-export const rule = 'Answer "yes" if the number is prime, otherwise answer "no":';
+export const rule =
+  'Answer "yes" if the number is prime, otherwise answer "no":';

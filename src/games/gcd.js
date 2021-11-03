@@ -1,4 +1,4 @@
-import getRandomNumber from '../utils.js';
+import getRandomNumber from "../utils.js";
 
 function findGreatestDivisor(a, b) {
   if (b) {
@@ -14,4 +14,4 @@ export function createBrainGCD() {
   const result = String(findGreatestDivisor(randomNum1, randomNum2));
   return { result, question };
 }
-export const rule = 'Find the greatest common devisor:';
+export const rule = "Find the greatest common devisor:";
